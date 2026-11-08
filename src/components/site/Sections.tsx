@@ -77,7 +77,7 @@ export function About() {
     ["Ética", "Aconselhamos com honestidade, mesmo quando a resposta não é a que o cliente quer ouvir."],
     ["Clareza nos honorários", "Valores acordados por escrito, em Kwanzas, antes de começarmos."],
     ["Respeito pelo cliente", "Explicamos cada passo numa linguagem simples e respondemos com prontidão."],
-  ];
+  ] as const;
   return (
     <section id="sobre" className="sona-pattern border-y border-border bg-muted">
       <div className="mx-auto grid max-w-6xl gap-12 px-4 py-20 lg:grid-cols-2">
@@ -109,7 +109,7 @@ export function Process() {
     ["Análise do caso", "Ouvimos a sua situação, analisamos os documentos e explicamos as opções possíveis."],
     ["Proposta de honorários e estratégia", "Apresentamos por escrito o plano de trabalho e os honorários, antes de avançar."],
     ["Acompanhamento do processo", "Mantemo-lo informado de cada passo até à conclusão do assunto."],
-  ];
+  ] as const;
   return (
     <section id="como-trabalhamos" className="mx-auto max-w-6xl px-4 py-20">
       <SectionTitle kicker="Como trabalhamos" title="Quatro passos, sem surpresas" />
