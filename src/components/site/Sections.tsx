@@ -158,7 +158,7 @@ export function Faq() {
     ["Que documentos devo levar?", "Traga o seu Bilhete de Identidade (BI), o NIF e todos os documentos relacionados com o caso: contratos, cartas, notificações ou decisões."],
     ["A minha conversa é confidencial?", "Sim. Tudo o que nos contar está protegido pelo sigilo profissional do advogado, mesmo que não chegue a contratar os nossos serviços."],
     ["Quanto tempo demora um processo?", "Depende da natureza do caso e do funcionamento dos tribunais e serviços públicos. Não garantimos prazos, mas damos-lhe sempre uma estimativa realista e informamos de qualquer atraso."],
-  ];
+  ] as const;
   return (
     <section id="duvidas" className="mx-auto max-w-3xl px-4 py-20">
       <SectionTitle kicker="Perguntas frequentes" title="Dúvidas comuns" />
