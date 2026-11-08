@@ -1,23 +1,41 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { Header } from "@/components/site/Header";
+import { ContactForm } from "@/components/site/ContactForm";
+import { About, Contact, Faq, Footer, Hero, PracticeAreas, Process, Team, WhatsAppFab } from "@/components/site/Sections";
 
-// The home route ships no og:image, so serve-time hosting can inject the
-// project's social preview (explicit og:image or latest screenshot).
+const title = "Domingos Kiala & Associados | Advogados em Luanda";
+const description = "Sociedade de advogados em Alvalade, Luanda. Direito societário, laboral, terras, família, fiscal e contencioso. Agende a sua consulta.";
+
 export const Route = createFileRoute("/")({
+  head: () => ({
+    meta: [
+      { title },
+      { name: "description", content: description },
+      { property: "og:title", content: title },
+      { property: "og:description", content: description },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary_large_image" },
+    ],
+  }),
   component: Index,
 });
 
-// IMPORTANT: Replace this placeholder. See ./README.md for routing conventions.
 function Index() {
   return (
-    <div
-      className="flex min-h-screen items-center justify-center"
-      style={{ backgroundColor: "#fcfbf8" }}
-    >
-      <img
-        data-lovable-blank-page-placeholder="REMOVE_THIS"
-        src="https://cdn.gpteng.co/blank-app-v1.svg"
-        alt="Your app will live here!"
-      />
-    </div>
+    <>
+      <Header />
+      <main>
+        <Hero />
+        <PracticeAreas />
+        <About />
+        <Process />
+        <Team />
+        <Faq />
+        <ContactForm />
+        <Contact />
+      </main>
+      <Footer />
+      <WhatsAppFab />
+    </>
   );
 }
