@@ -1,8 +1,12 @@
 import { useEffect, useState } from "react";
-import { Briefcase, Building2, Landmark, Receipt, Scale, Users, MessageCircle, MapPin, Clock, Phone, Mail, UserRound } from "lucide-react";
+import { Briefcase, Building2, Landmark, Receipt, Scale, Users, MessageCircle, MapPin, Clock, Phone, Mail } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import hero from "@/assets/luanda-baia.jpg";
+import joaquim from "@/assets/equipa-joaquim.jpg";
+import teresa from "@/assets/equipa-teresa.jpg";
+import manuel from "@/assets/equipa-manuel.jpg";
+const fotos: Record<string, string> = { joaquim, teresa, manuel };
 import { areas, equipa, estaAberto, site, waLink } from "@/lib/site-data";
 
 const icons = { Briefcase, Building2, Landmark, Receipt, Scale, Users };
@@ -136,9 +140,7 @@ export function Team() {
         <div className="grid gap-6 md:grid-cols-3">
           {equipa.map((p) => (
             <article key={p.nome} className="border border-secondary-foreground/15 p-6">
-              <div className="flex aspect-[4/3] items-center justify-center bg-secondary-foreground/5" role="img" aria-label={`Fotografia de ${p.nome} (a colocar)`}>
-                <UserRound className="h-16 w-16 opacity-30" aria-hidden />
-              </div>
+              <img src={fotos[p.foto]} alt={`Fotografia de ${p.nome}`} width={944} height={704} loading="lazy" className="aspect-[4/3] w-full object-cover" />
               <h3 className="mt-5 text-xl font-semibold">{p.nome}</h3>
               <p className="text-sm text-accent">{p.cargo} · {p.area}</p>
               <p className="mt-2 text-xs opacity-70">Cédula profissional n.º {p.cedula}</p>
