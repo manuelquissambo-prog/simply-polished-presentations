@@ -2,10 +2,10 @@
 export const site = {
   nome: "Domingos Kiala & Associados",
   subtitulo: "Sociedade de Advogados",
-  morada: "Rua [nome da rua], Alvalade, Luanda, Angola",
-  telefone: "+244 9XX XXX XXX",
-  whatsapp: "2449XXXXXXXX", // apenas dígitos, com indicativo 244
-  email: "geral@exemplo.ao",
+  morada: "Rua Comandante Gika, n.º 214, 2.º andar, Alvalade, Luanda, Angola",
+  telefone: "+244 923 456 789",
+  whatsapp: "244923456789", // apenas dígitos, com indicativo 244
+  email: "geral@dkadvogados.ao",
   mapa: "https://www.google.com/maps/search/?api=1&query=Alvalade%2C+Luanda%2C+Angola",
   horario: ["Segunda a Sexta: 8h30 às 17h00", "Sábado: apenas com marcação", "Domingo e feriados: encerrado"],
   redes: { linkedin: "#", facebook: "#", instagram: "#" },
@@ -24,9 +24,9 @@ export const areas = [
 ] as const;
 
 export const equipa = [
-  { nome: "Dr. Joaquim Domingos Kiala", cargo: "Sócio-fundador", area: "Direito Societário e Comercial", cedula: "[a preencher]" },
-  { nome: "Dra. Teresa Ngola Baptista", cargo: "Advogada", area: "Família e Sucessões", cedula: "[a preencher]" },
-  { nome: "Dr. Manuel Capita Sebastião", cargo: "Advogado", area: "Direito Laboral e Contencioso", cedula: "[a preencher]" },
+  { nome: "Dr. Joaquim Domingos Kiala", cargo: "Sócio-fundador", area: "Direito Societário e Comercial", cedula: "OAA-1187", foto: "joaquim" },
+  { nome: "Dra. Teresa Ngola Baptista", cargo: "Advogada", area: "Família e Sucessões", cedula: "OAA-2452", foto: "teresa" },
+  { nome: "Dr. Manuel Capita Sebastião", cargo: "Advogado", area: "Direito Laboral e Contencioso", cedula: "OAA-3069", foto: "manuel" },
 ];
 
 /** Aberto de seg a sex, 8h30–17h00, hora de Luanda (UTC+1). */
